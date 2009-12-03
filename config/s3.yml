@@ -1,9 +1,0 @@
-staging:
-  aws_access_key: ABC123
-  aws_secret_access_key: abc123abc123abc123abc123
-  bucket_base_name: yourbucket
-
-production:
-  aws_access_key: AKIAJ5M6LRZCOUJOHDLA
-  aws_secret_access_key: EyCrtZra0mQanmFgtyBJvqaO7uQmU4bx3Aqziofl
-  bucket_base_name: production.rhodri.com
