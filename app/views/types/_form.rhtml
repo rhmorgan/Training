@@ -1,0 +1,17 @@
+<%= error_messages_for 'type' %>
+
+<!--[form:type]-->
+<p><label for="type_name">Name</label><br/>
+<%= text_field 'type', 'name'  %></p>
+
+<p><label for="type_description">Description</label><br/>
+<%= text_area 'type', 'description', :rows=>5  %></p>
+
+<p><label for="type_order">Sort Order</label><br/>
+<%= text_field 'type', 'sort_order'  %></p>
+
+
+<p><label for="type_score_ind">Score ind</label><br/>
+<select id="type_score_ind" name="type[score_ind]"><option value="false">False</option><option value="true">True</option></select></p>
+<!--[eoform:type]-->
+

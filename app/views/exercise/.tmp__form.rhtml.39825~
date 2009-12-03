@@ -1,0 +1,13 @@
+<%= error_messages_for 'exercise' %>
+
+<!--[form:exercise]-->
+<p><label for="exercise_name">Name</label><br/>
+<%= text_field 'exercise', 'name'  %></p>
+
+<p><label for="exercise_description">Description</label><br/>
+<%= text_area 'exercise', 'description'  %></p>
+
+<p><label for="exercise_inactive_ind">Inactive ind</label><br/>
+<select id="exercise_inactive_ind" name="exercise[inactive_ind]"><option value="false">False</option><option value="true">True</option></select></p>
+<!--[eoform:exercise]-->
+

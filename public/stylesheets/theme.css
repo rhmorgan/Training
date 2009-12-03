@@ -1,0 +1,427 @@
+/* - - - Custom Theme - - - */
+
+/* ----- Logo ----- */
+h1 a {
+	background-image:url('../images/rails.png'); 
+	min-height:0;
+	height:40px;
+}
+* html h1 a {/* IE6 png Support */
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/rails.png", sizingMethod="crop");
+
+}
+
+/* ----- Backgrounds ----- */
+html{
+	background-image:none;
+	background-color:#4f6373;
+}
+h1{
+	background-image:none;
+	background-color:#293845;
+}
+#container, html.embed{
+	background-color:#efeed1;
+}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select{
+	background:#ffffff;
+	border:1px solid #bfbfbf;
+	border-bottom:1px solid #dedede;
+	border-right:1px solid #dedede;
+}
+.safari .wufoo select.select{
+	font-size:100% !important;
+}
+.safari .wufoo input.file{
+	background:none;
+	border:none;
+}
+.wufoo li.focused{
+	background-color:#d9d7ac;
+}
+.wufoo .instruct{
+	background-color:#8f8164;
+}
+
+/* ----- Borders ----- */
+#container{
+	border:0 solid #ffffff;
+}
+.wufoo .info, .wufoo .paging-context{
+	border-bottom:1px solid #d9d7ac;
+}
+.wufoo .section, .wufoo .captcha{
+	border-top:1px solid #d9d7ac;
+}
+.wufoo input.text, .wufoo textarea.textarea{
+	border:;
+}
+.wufoo .instruct{
+	border:0 solid #e6e6e6;
+}
+.fixed .info{
+	border-bottom:none;
+}
+
+/* ----- Typography ----- */
+.wufoo .info h2{
+	font-size:160%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#14212b;
+}
+.wufoo .info div{
+	font-size:95%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#444444;
+}
+.wufoo .section h3{
+	font-size:110%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#14212b;
+}
+.wufoo .section div{
+	font-size:85%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#444444;
+}
+
+.wufoo label.desc{
+	font-size:95%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#444444;
+}
+.wufoo label.choice{
+	font-size:100%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#444444;
+}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select{
+	font-size:100%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#333333;
+}
+.wufoo li div, .wufoo li span, .wufoo li div label, .wufoo li span label{
+	font-family:inherit;
+	color:#444444;
+}
+.safari .wufoo input.file{ /* Webkit */
+	font-size:100%;
+	font-family:inherit;
+	color:#444444;
+}
+.wufoo .instruct small{
+	font-size:80%;
+	font-family:inherit;
+	font-weight:;
+	font-style:;
+	color:#ffffff;
+}
+.altInstruct .instruct, .wufoo li.leftHalf .instruct, .wufoo li.rightHalf .instruct{
+	background:none;
+	border:none;
+}
+.altInstruct .instruct small, .wufoo li.leftHalf .instruct small, .wufoo li.rightHalf .instruct small{
+	color:#444444;
+	background:none;
+	border:none;
+}
+
+/* ----- Button Styles ----- */
+
+.wufoo input.btTxt{
+	font-size:;
+	font-family:;
+	font-weight:;
+	font-style:;
+	color:;
+}
+
+/* ----- Highlight Styles ----- */
+
+.wufoo li.focused label.desc,
+.wufoo li.focused div, .wufoo li.focused span, .wufoo li.focused div label, .wufoo li.focused span label,
+.safari .wufoo li.focused input.file{ 
+	color:#000000;
+}
+
+/* ----- Confirmation ----- */
+
+.confirm h2{
+	font-family:inherit;
+	color:#444444;
+}
+a.power{
+	background-color:#293845 !important;
+	border-color:#54606a !important;
+	color:#FFFFFF !important;
+}
+.embed a.power{
+	background-color:#d7d6bc !important;
+	border-color:#bfbea7 !important;
+	color:#000000 !important;
+}
+
+/* ----- Pagination ----- */
+
+.pg1 var, .pg2 var, .pg2 em, .page1 .pg2 var, .pg1 b, .wufoo .buttons .marker{
+	font-family:inherit;
+	color:#444444;
+}
+
+.pg1 var{
+	border:1px solid #bfbea7;
+}
+.pg1 .done var{
+	background:#d7d6bc;
+}
+
+.pg1 .selected var, .pg2 var, .pg2 var em{
+	background:#d9d7ac;
+	color:#000000;
+}
+.pg1 .selected var, .pg2 td{
+	border:1px solid #c3c29b;
+}
+
+/* Likert Backgrounds */
+
+.likert table{
+	background-color:#efeed1;
+}
+.likert thead td, .likert thead th{
+	background-color:#d7d6bc;
+}
+.likert tbody tr.alt td, .likert tbody tr.alt th{
+	background-color:#e5e4c9;
+}
+
+/* Likert Borders */
+
+.likert table, .likert th, .likert td{
+	border-color:#d0cfb6;
+}
+.likert td{
+	border-left:1px solid #bfbea7;
+}
+
+/* Likert Typography */
+
+.likert caption, .likert thead td, .likert tbody th label{
+	color:#444444;
+	font-family:inherit;
+}
+.likert tbody td label{
+	color:#575757;
+	font-family:inherit;
+}
+.likert caption, .likert tbody th label{
+	font-size:95%;
+}
+
+/* Likert Hover */
+
+.likert tbody tr:hover td, .likert tbody tr:hover th, .likert tbody tr:hover label{
+	background-color:#d9d7ac;
+	color:#000000;
+}
+.likert tbody tr:hover td{
+	border-left:1px solid #aeac8a;
+}
+
+/* ----- Report Styles ----- */
+
+.wufoo .wfo_graph h3{
+	font-size:95%;
+	font-family:inherit;
+	color:#444444;
+}
+.wufoo .wfo_graph h3 span{
+	color:#000000;
+}
+.wufoo .footer h4{
+	color:#14212b;
+}
+.wufoo .footer span{
+	color:#444444;
+}
+
+/* ----- Number Widget ----- */
+
+.wfo_number{
+	background-color:#e5e4c9;
+	border-color:#d0cfb6;
+}
+.wfo_number strong, .wfo_number em{
+	color:#000000;
+}
+
+/* ----- Chart Widget Border and Background Colors ----- */
+
+#widget, #widget body{
+	background:#efeed1;
+}
+.fcNav a.show{
+	background-color:#efeed1;
+	border-color:#bfbea7;
+}
+.fc table{
+	border-left:1px solid #d0cfb6;	
+}
+.fc thead th, .fc .more th{
+	background-color:#d0cfb6 !important;
+	border-right:1px solid #bfbea7 !important;
+}
+.fc tbody td, .fc tbody th, .fc tfoot th, .fc tfoot td{
+	background-color:#efeed1;
+	border-right:1px solid #bfbea7;
+	border-bottom:1px solid #d0cfb6;
+}
+.fc tbody tr.alt td, .fc tbody tr.alt th, .fc tbody td.alt{
+	background-color:#e5e4c9;
+}
+
+/* ----- Chart Widget Typography Colors ----- */
+
+.fc caption, .fcNav, .fcNav a{
+	color:#444444;
+}
+.fc tfoot, 
+.fc thead th,
+.fc tbody th div, 
+.fc tbody td.count, .fc .cards tbody td a, .fc td.percent var,
+.fc .timestamp span{
+	color:#000000;
+}
+.fc .indent .count{
+	color:#4b4b4b;
+}
+.fc .cards tbody td a span{
+	color:#7d7d7d;
+}
+
+/* ----- Chart Widget Hover Colors ----- */
+
+.fc tbody tr:hover td, .fc tbody tr:hover th,
+.fc tfoot tr:hover td, .fc tfoot tr:hover th{
+	background-color:#d9d7ac;
+}
+.fc tbody tr:hover th div, .fc tbody tr:hover td, .fc tbody tr:hover var,
+.fc tfoot tr:hover th div, .fc tfoot tr:hover td, .fc tfoot tr:hover var{
+	color:#000000;
+}
+
+/* ----- Payment Summary ----- */
+
+.invoice thead th, 
+.invoice tbody th, .invoice tbody td,
+.invoice tfoot th,
+.invoice .total,
+.invoice tfoot .last th, .invoice tfoot .last td,
+.invoice tfoot th, .invoice tfoot td{
+	border-color:#d0cfb6;
+}
+.invoice thead th{
+	background:#e5e4c9;
+}
+.invoice th, .invoice td{
+	color:#000000;
+}
+#ppSection, #ccSection{
+	border-bottom:1px solid #d9d7ac;
+}
+#shipSection, #invoiceSection{
+	border-top:1px solid #d9d7ac;
+}
+
+/* Drop Shadows */
+#bottom{
+	visibility:visible;
+}
+
+
+/* Navigation */
+#pagewrapper {
+    width: 640px;
+    margin: 10px auto;
+    padding: 0;
+    border: 1px solid #999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#login {
+    background-color: #293845;
+    margin: 0;
+    padding: 0;
+}
+
+#login p {
+    padding: 5px 5px;
+    font-size: 14px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	float: right;
+}
+
+#header {
+    background-color: #293845;
+    margin: 0;
+    padding: 0;
+}
+
+#header p {
+    padding: 30px 10px;
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#navbar ul {
+    border-left: 1px solid #333;
+	padding: 0;
+    margin:  0;
+    background-color: #999;
+    color: White;
+    float: left;
+    width: 100%;
+    list-style: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 2px solid #333;
+}
+#navbar ul li { 
+	display: inline;
+    color: White;
+    float: left;	
+    border-right: 1px solid #333;
+    font-family: arial, helvetica, sans-serif;
+}
+#navbar ul li a {
+    padding: 0.2em 0.7em;
+    background-color: #999; 
+    color: White;
+    text-decoration: none;
+    float:left;
+}
+#navbar ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+

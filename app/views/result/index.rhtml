@@ -1,0 +1,7 @@
+		<% @section = Setup.find(:first) %>
+
+		<% for stud in Student.find(:all, :conditions=>["section_id = ?", @section.section_id]) %>
+			<%= stud.name %>
+			<%= link_to "Evaluate", :action => 'evaluation', :id => stud.id %>
+			<%= link_to "Scorecard", :action => 'scorecard', :id => stud.id %><br>
+		<% end %>		

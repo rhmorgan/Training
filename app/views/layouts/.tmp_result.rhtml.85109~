@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Deliverable: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'theme' %>
+  <%= stylesheet_link_tag 'structure' %>
+  <%= stylesheet_link_tag 'form' %>
+
+  
+</head>
+<body id="public">
+
+		<div id='pagewrapper'>
+			<div id='login'>
+				<p>You are logged in as: <%= @session[:user].login %></p>
+			</div>
+
+			<div id='header'>
+				<p>Role Player Training</p>
+  		    </div>
+
+
+			<div id='navbar'>
+				<ul>
+					<li><%= link_to 'Students', {:controller => 'result', :action => 'index'} %></li>
+					<li><%= link_to 'Logout', {:controller => 'user', :action => 'logout'} %></li>
+				</ul>
+		    </div>
+		</div>
+
+<div id="container">
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</div>
+<img id="bottom" src="images/bottom.png" alt="" />
+ 
+
+</body>
+</html>

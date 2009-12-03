@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Courses: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style' %>
+</head>
+<body>
+	<div id="logo">
+		<h1><a href="#">Guarantee  </a></h1>
+		<p><em> template design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></em></p>
+	</div>
+	<hr />
+	<!-- end #logo -->
+	<div id="header">
+		<div id="menu">
+			<ul>
+					<li><%= link_to 'Home', {:controller => 'pages', :action => 'home'} %></li>
+					<li><%= link_to 'Resources', {:controller => 'pages', :action => 'resources'} %></li>
+			    <li><%= link_to 'About Us', {:controller => 'pages', :action => 'about'} %></li>
+			    <li><%= link_to 'Contact Us', {:controller => 'pages', :action => 'contact'} %></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<div id="search">
+			<form method="get" action="">
+				<fieldset>
+				<input type="text" name="s" id="search-text" size="15" />
+				<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+		<!-- end #search -->
+	</div>
+
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>

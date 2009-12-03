@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+	</head>
+	<body>
+
+<% form_tag :action => 'update' do %>
+
+You are signed in as: <%= @user.id %> <%= @user.login %><br>
+
+<% for excercise in Excercise.find(:all) %>
+	
+	<p><label for="excercise_name"><h2><%= excercise.name %></h2></label><br/>
+	<% @test = excercise.id %>
+	<% for deliverable in Deliverable.find(:all, :conditions=>["excercise_id=?",excercise.id]) %>
+
+		<% @checked_ind = false %>
+		<% for res in @results %>
+			<% if res.deliverable_id == deliverable.id %>
+			<% @checked_ind = true %>
+			<% end %>		
+		<% end %>
+		
+		<%= deliverable.name %>
+		<%= check_box_tag "result[deliverable_ids][]", deliverable.id, @checked_ind %><br>		
+
+	<% end %>
+
+<% @commentr = Comment.find(:first, :conditions=>["student_id=? and user_id=? and exercise_id=?", @student.id,@user.id, excercise.id]) %>
+<%= text_area 'comments', excercise.id, :rows=>3  %></p>	
+<%= text_area_tag 'bio' + excercise.id.to_s, @commentr.id %>
+<% end %>
+
+<%= submit_tag 'ThisRocks' %>
+<% end %>
+
+	</body>
+</html>

@@ -1,0 +1,79 @@
+
+<% form_tag( { :action => 'update' }, :class => 'wufoo' ) do %>
+
+
+<% @course = Setup.find(:first) %>
+
+<% for exercise in Exercise.find(:all, :conditions=>["user_id=? and course_id = ?",  @user.id, @course.course_id],  :joins=>" INNER JOIN exercises_users ON exercises_users.exercise_id = exercises.id", :order=>"sort_order") %>
+
+	<div class="info">
+	<h2><%= exercise.name %></h2>
+	</div>
+	
+	<ul>
+	
+	<% for type in Type.find(:all, :order=>"sort_order")%>
+
+	<% dels = Deliverable.find(:all, :conditions=>["exercise_id=? and type_id=? and inactive_ind = 0",exercise.id, type.id], :order=>"sort_order") %>
+	
+		<% if dels.empty? %>
+		
+		<% else %>
+	
+
+		<li>			
+		<label class="desc">Type: <%= type.name %></label>
+	
+			<% for deliverable in dels %>
+		
+				<% @checked_ind = false %>
+				<% for res in @results %>
+					<% if res.deliverable_id == deliverable.id %>
+					<% @checked_ind = true %>
+					<% end %>		
+				<% end %>
+
+			<div class="col">
+				<span><%= check_box_tag "result[deliverable_ids][]", deliverable.id, @checked_ind, :class=>"field checkbox" %>		
+				<label class="choice"><%= deliverable.name %></label></span> 	
+		
+			<% end %>
+			</div>
+	</li>
+	
+		<% end %>
+	<% end %>
+	
+<% @commentr = Comment.find(:first, :conditions=>["student_id=? and user_id=? and exercise_id=?", @student,@user.id, exercise.id]) %>
+
+
+<% if @commentr.nil? 
+	  testme = "" 
+ else 
+	  testme = @commentr.comments  
+ end %>
+
+
+
+	<li>
+	<label class="desc">Comments<span class="req">*</span></label>
+		<div>
+		<%= text_area_tag 'comments[' + exercise.id.to_s + ']', testme, :class=>"desc", :rows=>5,:cols=>70 %><br>		
+		</div> 
+		<p class="instruct">Please put any comments for exercise <%= exercise.name %> in the textbox.</p>
+	</li>
+
+
+
+
+<% end %>
+
+<li class="buttons">
+	<%= submit_tag 'ThisRocks', :class=>"btTxt" %>
+</li>
+
+</ul>
+
+<% end %>
+
+

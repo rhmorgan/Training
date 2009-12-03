@@ -1,0 +1,13 @@
+<%= start_form_tag :action=> "login" %>
+    <h3>Login</h3>  
+
+  <label for="user_login">Login:</label><br/>
+  <%= text_field "user", "login", :size => 20 %><br/>
+
+  <label for="user_password">Password:</label><br/>
+  <%= password_field "user", "password", :size => 20 %><br/>
+
+<%= submit_tag "Submit" %>
+     
+
+<%= end_form_tag %>

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<% @section = Setup.find(:first) %>
+
+		<% for stud in Student.find(:all, :conditions=>["section_id = ?", @section.section_id]) %>
+			<%= link_to stud.name, :action => 'index', :id => stud %>
+			<%= stud.name %><br>
+		<% end %>		
+	</body>
+</html>

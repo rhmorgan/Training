@@ -1,0 +1,16 @@
+<%= error_messages_for 'deliverable' %>
+
+<!--[form:deliverable]-->
+<p><label for="deliverable_Name">Name</label><br/>
+<%= text_field 'deliverable', 'Name'  %></p>
+
+<p><label for="deliverable_Description">Description</label><br/>
+<%= text_area 'deliverable', 'Description'  %></p>
+
+<p><label for="deliverable_Inactive_Ind">Inactive ind</label><br/>
+<select id="deliverable_Inactive_Ind" name="deliverable[Inactive_Ind]"><option value="false">False</option><option value="true">True</option></select></p>
+
+<p><label for="deliverable_Excercise_ID">Excercise id</label><br/>
+<%= text_field 'deliverable', 'Excercise_ID'  %></p>
+<!--[eoform:deliverable]-->
+

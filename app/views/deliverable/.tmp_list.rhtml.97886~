@@ -1,0 +1,27 @@
+<h1>Listing deliverables</h1>
+
+<table>
+  <tr>
+  <% for column in Deliverable.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for deliverable in @deliverables %>
+  <tr>
+  <% for column in Deliverable.content_columns %>
+    <td><%=h deliverable.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => deliverable %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => deliverable %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => deliverable }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @deliverable_pages.current.previous } if @deliverable_pages.current.previous %>
+<%= link_to 'Next page', { :page => @deliverable_pages.current.next } if @deliverable_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New deliverable', :action => 'new' %>

@@ -1,0 +1,44 @@
+<h2>Summary Matrix</h2>
+<table border="1">
+  <tr>
+    <th>Student</th>
+    <th>Exercise</th>
+	<th>Complete</th>
+    <th>Possible</th>
+	<th>% Complete</th>
+	<th>Complete Ind</th>
+  </tr>
+
+  		
+		<% for item in @summary_completion_matrix %>
+		<tr>
+		    <td><%= item.Student %></td>
+		    <td><%= item.Exercise %></td>
+		    <td><%= item.Complete %></td>
+		    <td><%= item.Possible %></td>
+		    <td><%= item.Percent_Complete %></td>
+		    <td><%= item.Complete_Ind %></td>			
+		</tr>
+		<% end %>
+</table><br>
+		
+
+<h2>Detailed Matrix</h2>
+<table border="1">
+
+  <tr>
+    <th>Student</th>
+    <th>Exercise</th>
+	<th>Deliverable</th>
+    <th>Complete</th>
+  </tr>
+ 		
+		<% for item in @detailed_completion_matrix %>
+		<tr>
+		    <td><%= item.Student %></td>
+		    <td><%= item.Exercise %></td>
+		    <td><%= item.Deliverable %></td>
+		    <td><%= item.Complete %></td>
+		</tr>
+		<% end %>
+</table>		

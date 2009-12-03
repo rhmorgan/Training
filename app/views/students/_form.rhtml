@@ -1,0 +1,13 @@
+<%= error_messages_for 'student' %>
+
+<!--[form:student]-->
+<p><label for="student_name">Name</label><br/>
+<%= text_field 'student', 'name'  %></p>
+
+<p><label for="student_inactive_ind">Inactive ind</label><br/>
+<select id="student_inactive_ind" name="student[inactive_ind]"><option value="false">False</option><option value="true">True</option></select></p>
+<!--[eoform:student]-->
+
+<p><b>Class</b>
+<%= collection_select(:student, :section_id, Section.find(:all), :id, :name, {} ) %></p>
+</p>

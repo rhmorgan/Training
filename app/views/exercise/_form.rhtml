@@ -1,0 +1,23 @@
+<%= error_messages_for 'exercise' %>
+
+<!--[form:exercise]-->
+<p><label for="exercise_name">Name</label><br/>
+<%= text_field 'exercise', 'name'  %></p>
+
+<p><label for="exercise_description">Description</label><br/>
+<%= text_area 'exercise', 'description', :rows=>5  %></p>
+
+<p><label for="exercise_inactive_ind">Inactive ind</label><br/>
+<select id="exercise_inactive_ind" name="exercise[inactive_ind]"><option value="false">False</option><option value="true">True</option></select></p>
+<!--[eoform:exercise]-->
+
+<p><label for="exercise_sort_order">Sort Order</label><br/>
+<%= text_field 'exercise', 'sort_order'  %></p>
+
+<p><b>Course</b>
+<%= collection_select(:exercise, :course_id, Course.find(:all), :id, :name, {}) %></p>
+</p>
+
+<p><b>Users</b>
+<%= collection_select(:exercise, :user_ids, User.find(:all), :id, :login, {}, :multiple => true ) %></p>
+</p>
